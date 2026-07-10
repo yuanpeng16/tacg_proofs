@@ -5,21 +5,19 @@
 
 **Main project repository:** https://github.com/yuanpeng16/tacg
 
+The proofs are machine-checked by Lean 4. The key files are:
+- **[Definitions.lean](TACG/Definitions.lean)** – core definitions
+- **[NecessaryAndSufficientCondition.lean](TACG/Derivations/Theorems/NecessaryAndSufficientCondition.lean)** – main theorem
+
 ## Verification
 
     lake build
     # Build completed successfully (1942 jobs).
 
-## Quick Start
-
-For readers interested in the formalization:
-
-- **[Definitions.lean](TACG/Definitions.lean)** – contains all core definitions (components, graphs, AS‑UMR, etc.).
-- **[NecessaryAndSufficientCondition.lean](TACG/Derivations/Theorems/NecessaryAndSufficientCondition.lean)** – states the main theorem.
-
-All proofs have been mechanically verified by Lean 4, so the derivation is fully formal and reliable.
-
 ## Main Files
+
+Listed below are the files corresponding to lemmas, propositions, and theorems from the paper.  
+Files not listed are auxiliary.
 - [TACG](TACG.lean)
 - TACG
     - [Definitions](TACG/Definitions.lean)
