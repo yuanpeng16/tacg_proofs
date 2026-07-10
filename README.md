@@ -10,8 +10,15 @@ The proofs are machine-checked by Lean 4. The key files are:
 
 ## Verification
 
-    lake build
-    # Build completed successfully (1942 jobs).
+```bash
+lake build
+```
+
+Output:
+
+```
+Build completed successfully (1942 jobs).
+```
 
 ## Main Files
 
