@@ -1,6 +1,5 @@
 # TACG: Formal Verification in Lean 4
 
-**Formalization of:**  
 *A Theoretical Analysis of Provable Compositional Generalization in Neural Networks: A Necessary and Sufficient Condition*
 
 **Main project repository:** https://github.com/yuanpeng16/tacg
