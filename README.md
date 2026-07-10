@@ -10,6 +10,15 @@
     lake build
     # Build completed successfully (1942 jobs).
 
+## Quick Start
+
+For readers interested in the formalization:
+
+- **[Definitions.lean](TACG/Definitions.lean)** – contains all core definitions (components, graphs, AS‑UMR, etc.).
+- **[NecessaryAndSufficientCondition.lean](TACG/Derivations/Theorems/NecessaryAndSufficientCondition.lean)** – states the main theorem.
+
+All proofs have been mechanically verified by Lean 4, so the derivation is fully formal and reliable.
+
 ## Main Files
 - [TACG](TACG.lean)
 - TACG
