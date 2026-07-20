@@ -69,7 +69,9 @@ by
 /-! ## Auxiliary Lemma 2: Construct surjective g -/
 
 /-- Define g : D' → R' mapping each hypothesis value to its unique reference value.
-    This mapping is surjective by the surjective_mapping lemma. -/
+    This mapping is surjective (by the surjective_mapping lemma) and corresponds
+    to the mapping g used in the proof of
+    `minimum_entropy_implies_minimized_representation`. -/
 lemma surjective_g
     (M Z : Model) (train : List Sample) (c : Component)
     (h_struct : StructuralAlignment M Z train)

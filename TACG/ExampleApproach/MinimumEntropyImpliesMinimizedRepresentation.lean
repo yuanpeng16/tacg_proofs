@@ -23,12 +23,18 @@ def IsMinimalEntropy (D : Finset Value) (p : Value → ℝ) : Prop :=
     then its domain size equals the reference image size, i.e., minimized
     representation (Definition 9) holds.
 
-    The proof proceeds by contradiction:
-    1. If representation is not minimized, |D| > |R|.
-    2. By pigeonhole principle, two distinct hypothesis values map to the same
-       reference value via the surjective mapping g.
-    3. Merge these two hypothesis values in the probability distribution p to get q.
-    4. Entropy strictly decreases (Lemma 16), contradicting minimality of p.
+    The proof proceeds as follows:
+    1. Unambiguous representation ensures that each hypothesis value maps to a
+       unique reference value. When constructing a new distribution, the only
+       allowed operation is to merge distinct hypothesis values that already
+       share the same reference value; splitting is not permitted.
+    2. Assume for contradiction that the representation is not minimized.
+       Then |D| > |R|. By surjectivity of the mapping g : D → R and the
+       pigeonhole principle, two distinct hypothesis values h1, h2 ∈ D map to
+       the same reference value.
+    3. Merge h1 and h2 in the probability distribution p to obtain q.
+    4. By Lemma 16 (entropy decreases under event merging), entropy(q) < entropy(p),
+       contradicting the minimality of p.
 -/
 lemma minimum_entropy_implies_minimized_representation
     (M Z : Model) (train : List Sample) (c : Component)
