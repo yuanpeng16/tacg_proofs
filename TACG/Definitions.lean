@@ -217,18 +217,18 @@ def AS_UMR (M : Model) (train test : List Sample) : Prop :=
       UnambiguousRepresentation c train M Z.model ∧
       MinimizedRepresentation c train M Z.model
 
-/-- Alternative compositional generalization (Definition 13 in the paper):
+/-- Alternative compositional generalization (Definition 14 in the paper):
     original definition plus the seen‑inputs condition. -/
 def AlternativeCompositionalGeneralization (M : Model) (train test : List Sample) : Prop :=
   CompositionalGeneralization M train test ∧ seen_inputs_condition M train test
 
-/-- Injective representation (Definition 14 in the paper).
+/-- Injective representation (Definition 15 in the paper).
     Each reference value has at most one hypothesis value. -/
 def InjectiveRepresentation (c : Component) (train : List Sample) (M1 M2 : Model) : Prop :=
   ∀ (z : Value) (_ : z ∈ ξ_set M2 train c) (h1 h2 : Value),
     ξ M1 M2 train c h1 z → ξ M1 M2 train c h2 z → h1 = h2
 
-/-- AS‑IR (Definition 15 in the paper):
+/-- AS‑IR (Definition 16 in the paper):
     Aligned Structure‑Injective Representation. -/
 def AS_IR (M : Model) (train test : List Sample) : Prop :=
   let used_comps := components_list M train

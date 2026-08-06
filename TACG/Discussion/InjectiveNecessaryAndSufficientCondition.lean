@@ -15,7 +15,7 @@ import TACG.Derivations.Sufficiency.InjectiveMappingForSufficiency
 This file formalizes the injective version of the main theorem:
 compositional generalization is equivalent to AS-IR (Aligned Structure-Injective
 Representation). This is a corollary of the main theorem, showing that
-injective representation (Definition 14) captures the same condition as
+injective representation (Definition 15) captures the same condition as
 the combination of unambiguous and minimized representations.
 -/
 

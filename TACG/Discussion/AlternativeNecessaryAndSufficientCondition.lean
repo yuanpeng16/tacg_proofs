@@ -14,7 +14,7 @@ import TACG.Discussion.SeenTestInputs
 
 This file formalizes the alternative version of the main theorem,
 where the "seen test inputs" requirement is part of the definition
-of compositional generalization itself (Definition 13 in the paper),
+of compositional generalization itself (Definition 14 in the paper),
 rather than a separate assumption.
 -/
 
