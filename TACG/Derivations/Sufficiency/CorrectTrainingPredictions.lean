@@ -2,7 +2,7 @@ import TACG.Definitions
 
 open TACG.Definitions
 
-/-- Lemma 9 (Correct Training Prediction).
+/-- Lemma 9 (Correct Training Predictions).
     This is a direct application of the definition of `correct_predictions`:
     if a model is correct on all training samples, then for any particular
     training sample A, the output nodes of its graph equal the sample's output.

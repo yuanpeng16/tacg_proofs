@@ -37,7 +37,7 @@ Files not listed are auxiliary.
             - Lemma 8: [Reference Graph Set Construction](TACG/Derivations/Necessity/ReferenceGraphSetConstruction.lean)
             - Proposition 1: [Necessity](TACG/Derivations/Necessity/NecessityDirection.lean)
         - Sufficiency
-            - Lemma 9: [Correct Training Prediction](TACG/Derivations/Sufficiency/CorrectTrainingPrediction.lean)
+            - Lemma 9: [Correct Training Predictions](TACG/Derivations/Sufficiency/CorrectTrainingPredictions.lean)
             - Lemma 10: [Deterministic Components](Derivations/Sufficiency/DeterministicComponents.lean)
             - Lemma 11: [Surjective Mapping](TACG/Derivations/Sufficiency/SurjectiveMapping.lean)
             - Lemma 12: [Injective Component Outputs](TACG/Derivations/Sufficiency/InjectiveComponentOutputs.lean)
