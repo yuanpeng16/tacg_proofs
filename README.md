@@ -37,25 +37,24 @@ Files not listed are auxiliary.
             - Lemma 8: [Reference Graph Set Construction](TACG/Derivations/Necessity/ReferenceGraphSetConstruction.lean)
             - Proposition 1: [Necessity](TACG/Derivations/Necessity/NecessityDirection.lean)
         - Sufficiency
-            - Lemma 9: [Deterministic Components](Derivations/Sufficiency/DeterministicComponents.lean)
-            - Lemma 10: [Surjective Mapping](TACG/Derivations/Sufficiency/SurjectiveMapping.lean)
-            - Lemma 11: [Injective Component Outputs](TACG/Derivations/Sufficiency/InjectiveComponentOutputs.lean)
-            - Lemma 12: [Component Input](TACG/Derivations/Sufficiency/ComponentInput.lean)
+            - Lemma 9: [Surjective Mapping](TACG/Derivations/Sufficiency/SurjectiveMapping.lean)
+            - Lemma 10: [Injective Component Outputs](TACG/Derivations/Sufficiency/InjectiveComponentOutputs.lean)
+            - Lemma 11: [Component Input](TACG/Derivations/Sufficiency/ComponentInput.lean)
             - Lemma 2: [Induction Step](TACG/Derivations/Sufficiency/InductionStep.lean)
-            - Lemma 13: [Induction over the Graph](TACG/Derivations/Sufficiency/InductionOverGraph.lean)
-            - Lemma 14: [Injective Mapping for Sufficiency](TACG/Derivations/Sufficiency/InjectiveMappingForSufficiency.lean)
+            - Lemma 12: [Induction over the Graph](TACG/Derivations/Sufficiency/InductionOverGraph.lean)
+            - Lemma 13: [Injective Mapping for Sufficiency](TACG/Derivations/Sufficiency/InjectiveMappingForSufficiency.lean)
             - Proposition 2: [Sufficiency](TACG/Derivations/Sufficiency/SufficiencyDirection.lean)
         - Theorem
             - Theorem 1: [Necessary and Sufficient Condition](TACG/Derivations/Theorems/NecessaryAndSufficientCondition.lean)
     - Example Approach
-        - Lemma 15: [Entropy Decreases Under Event Merging](TACG/ExampleApproach/EntropyDecreasesUnderEventMerging.lean)
+        - Lemma 14: [Entropy Decreases Under Event Merging](TACG/ExampleApproach/EntropyDecreasesUnderEventMerging.lean)
         - Lemma 3: [Minimum Entropy Implies Minimized Representation](TACG/ExampleApproach/MinimumEntropyImpliesMinimizedRepresentation.lean)
         - Corollary 1: [Example Approach Verification](TACG/ExampleApproach/ExampleApproachVerification.lean)
     - Minimal Example
         - Lemma 4: [Unambiguous Representation Verification](TACG/MinimalExample/UnambiguousRepresentationVerification.lean)
         - Corollary 2: [Minimal Example Verification](TACG/MinimalExample/MinimalExampleVerification.lean)
     - Discussion
-        - Lemma 16: [Seen Test Inputs](TACG/Discussion/SeenTestInputs.lean)
+        - Lemma 15: [Seen Test Inputs](TACG/Discussion/SeenTestInputs.lean)
         - Theorem 2: [Alternative Necessary and Sufficient Condition](TACG/Discussion/AlternativeNecessaryAndSufficientCondition.lean)
         - Corollary 3: [Injective Necessary and Sufficient Condition](TACG/Discussion/InjectiveNecessaryAndSufficientCondition.lean)
 
