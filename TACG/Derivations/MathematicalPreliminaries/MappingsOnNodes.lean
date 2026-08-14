@@ -1,7 +1,4 @@
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Finset.Basic
 import Mathlib.Data.Fintype.Card
-import Mathlib.Logic.Function.Basic
 
 open Finset
 open Function
