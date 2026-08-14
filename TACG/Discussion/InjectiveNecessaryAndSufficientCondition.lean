@@ -54,7 +54,7 @@ theorem injective_necessary_and_sufficient_condition (M : Model) (train test : L
         intro s hs
         specialize h_struct s (by simp [hs])
         exact h_struct
-      -- Unambiguous + minimized implies injective by Lemma 12.
+      -- Unambiguous + minimized implies injective by Lemma 11.
       exact injective_component_outputs M Z.model train c h_struct_train h_unamb h_min
   · -- Sufficiency: from AS-IR to compositional generalization.
     intro h_as_ir

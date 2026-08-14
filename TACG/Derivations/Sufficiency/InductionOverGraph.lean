@@ -10,7 +10,7 @@ open TACG.Derivations.Sufficiency.IndexTopology
 
 namespace TACG.Derivations.Sufficiency.InductionOverGraph
 
-/-- Lemma 14: Induction over the Graph.
+/-- Lemma 13: Induction over the Graph.
     If structural alignment and injective representation hold for all used
     components, then for every node in a test graph (input or non-input),
     there exists a training graph node with the same component, same reference

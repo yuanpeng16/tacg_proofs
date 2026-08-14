@@ -228,7 +228,7 @@ private lemma input_values_match
         get_map (M.graphSet B).node_value insB i hiB_len]
     exact hM_val_eq
 
-/-- Lemma 13: Component Input. Given structural alignment, injective representation
+/-- Lemma 12: Component Input. Given structural alignment, injective representation
     for all used components, and the induction hypothesis for the inputs of a
     test node zB, there exists a training node zA whose inputs match those of zB
     in both reference and hypothesis. This is the key step for the induction. -/

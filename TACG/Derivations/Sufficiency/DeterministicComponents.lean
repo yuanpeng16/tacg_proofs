@@ -2,7 +2,7 @@ import TACG.Definitions
 
 open TACG.Definitions
 
-/- Lemma 10 (Deterministic Components) from the paper:
+/- Lemma 9 (Deterministic Components) from the paper:
    For a given model M, each component c is deterministic:
    if the input value lists are equal, then the output values are equal.
    This follows directly from the fact that `apply_of c` is a function

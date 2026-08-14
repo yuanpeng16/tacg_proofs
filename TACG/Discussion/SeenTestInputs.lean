@@ -247,7 +247,7 @@ private lemma hcomps_Z_to_hcomps_M {train test : List Sample}
   exact hcomps_Z
 
 /-!
-# Main Lemma: Acquire Seen Inputs (Lemma 17 in the paper)
+# Main Lemma: Acquire Seen Inputs (Lemma 16 in the paper)
 
 Given structural alignment, and for all used components both unambiguous and
 minimized representations hold, then all test component inputs have been seen
@@ -276,7 +276,7 @@ lemma seen_test_inputs {train test : List Sample}
     exact injective_component_outputs M Z.model train c h_struct_train (h_unamb c hc) (h_min c hc)
   -- 3. Build the induction hypothesis for the inputs of n.
   have ind_hyp := build_induction_hypothesis Z M h_struct inj_repr B hB_test n
-  -- 4. Apply Lemma 13 (Component Input) to obtain matching inputs.
+  -- 4. Apply Lemma 12 (Component Input) to obtain matching inputs.
   obtain ⟨A, zA, hA, hzA_non_Z, hcomp_Z, hvals_Z, hcomps_Z, hvals_M⟩ :=
     component_input Z M h_struct inj_repr B hB_test n hn_Z ind_hyp
   -- 5. Convert the witness from Z graph to M graph.

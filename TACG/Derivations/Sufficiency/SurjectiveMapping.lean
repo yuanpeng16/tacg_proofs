@@ -6,7 +6,7 @@ open TACG.Derivations.Helper.SetMembership
 
 namespace TACG.Derivations.Sufficiency.SurjectiveMapping
 
-/-- Lemma 11 (Surjective Mapping) from the paper.
+/-- Lemma 10 (Surjective Mapping) from the paper.
     If M and Z are structurally aligned on training set `train`, then for any component c,
     every reference value z_val produced by Z on a training sample has a corresponding
     hypothesis value h_val in M from the same sample and node, such that h_val is in

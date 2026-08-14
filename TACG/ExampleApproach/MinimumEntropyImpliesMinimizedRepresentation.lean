@@ -33,7 +33,7 @@ def IsMinimalEntropy (D : Finset Value) (p : Value → ℝ) : Prop :=
        pigeonhole principle, two distinct hypothesis values h1, h2 ∈ D map to
        the same reference value.
     3. Merge h1 and h2 in the probability distribution p to obtain q.
-    4. By Lemma 16 (entropy decreases under event merging), entropy(q) < entropy(p),
+    4. By Lemma 15 (entropy decreases under event merging), entropy(q) < entropy(p),
        contradicting the minimality of p.
 -/
 lemma minimum_entropy_implies_minimized_representation
@@ -88,7 +88,7 @@ by
     calc
       ∑ h ∈ D, q h = ∑ h ∈ D, p h := sum_q_eq_sum_p D h1_val h2_val h1_in_D h2_in_D h_ne' p
       _ = 1 := h_sum
-  -- 7. Merging two events strictly decreases entropy (Lemma 16).
+  -- 7. Merging two events strictly decreases entropy (Lemma 15).
   have h_ent_decrease :=
     entropy_decreases_under_event_merging D h1_val h2_val h1_in_D h2_in_D h_ne' p
       (fun i hi => le_of_lt ((h_support i).mp hi)) h_sum h_pos1 h_pos2

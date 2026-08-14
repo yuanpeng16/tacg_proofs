@@ -42,7 +42,7 @@ private lemma mul_log_add_mul_log_lt_mul_log_add {x y : ℝ} (hx : x > 0) (hy : 
 noncomputable def entropy {ι : Type*} [DecidableEq ι] (s : Finset ι) (p : ι → ℝ) : ℝ :=
   -Finset.sum s (fun i => p i * Real.log (p i))
 
-/-- Lemma 16 from the paper: Entropy strictly decreases when we merge two events
+/-- Lemma 15 from the paper: Entropy strictly decreases when we merge two events
     with positive probability. Merging is realized by moving the probability of
     b onto a and setting b to zero. This is the key lemma for proving that
     minimum entropy implies minimized representation, since any redundant
