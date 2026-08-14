@@ -11,12 +11,7 @@ namespace TACG.Derivations.MathematicalPreliminaries.MappingsOnNodes
 /-- Lemma 1 (Mappings on Nodes) from the paper.
     For finite sets S₁ (hypothesis representations) and S₂ (reference representations),
     given a well-defined and surjective mapping f : S₁ → S₂,
-    f is injective iff |S₁| = |S₂|, i.e., the domain size is minimized.
-
-    This combines the contents of the former Lemmas 5, 6, and 7 into a single
-    self-contained proof that aligns with the paper's final streamlined structure.
-    It is used to show that minimized representation plus unambiguous representation
-    implies injective representation, which is crucial for the induction step. -/
+    f is injective iff |S₁| = |S₂|, i.e., the domain size is minimized. -/
 lemma mappings_on_nodes {S₁ S₂ : Type} [Fintype S₁] [Fintype S₂] (f : S₁ → S₂)
     (hf_surj : Surjective f) :
     Injective f ↔ Fintype.card S₁ = Fintype.card S₂ := by
