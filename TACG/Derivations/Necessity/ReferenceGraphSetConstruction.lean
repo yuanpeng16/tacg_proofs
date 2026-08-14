@@ -61,7 +61,7 @@ private lemma self_ξ_bijective (M : Model) (train : List Sample) (c : Component
 
 /-! ### Main lemma -/
 
-/-- Lemma 8: Reference Graph Set Construction.
+/-- Lemma 5: Reference Graph Set Construction.
     Under correct training, compositional generalization, and seen test inputs,
     the model itself can serve as a reference model, satisfying structural
     alignment and bijective self-ξ mappings. -/
