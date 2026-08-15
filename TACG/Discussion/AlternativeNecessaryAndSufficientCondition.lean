@@ -7,7 +7,7 @@ Authors: The TACG Contributors
 import TACG.Definitions
 import TACG.Derivations.Necessity.NecessityDirection
 import TACG.Derivations.Sufficiency.SufficiencyDirection
-import TACG.Discussion.SeenTestInputs
+import TACG.Discussion.SeenTestComponentInputs
 
 /-!
 # Theorem 2 (Alternative Necessary and Sufficient Condition)
@@ -21,7 +21,7 @@ rather than a separate assumption.
 open TACG.Definitions
 open TACG.Derivations.Necessity.NecessityDirection
 open TACG.Derivations.Sufficiency.SufficiencyDirection
-open TACG.Discussion.SeenTestInputs
+open TACG.Discussion.SeenTestComponentInputs
 
 namespace TACG.Discussion.AlternativeNecessaryAndSufficientCondition
 
@@ -45,7 +45,7 @@ theorem alternative_necessary_and_sufficient_condition (M : Model) (train test :
     have h_cg := sufficiency_direction M train test h_as_umr
     -- Then prove that all test component inputs are seen in training.
     rcases h_as_umr with ⟨Z, h_struct, h_cond⟩
-    have h_seen := seen_test_inputs Z M h_struct
+    have h_seen := seen_test_component_inputs Z M h_struct
       (fun c hc => (h_cond c hc).1)   -- unambiguous representation
       (fun c hc => (h_cond c hc).2)   -- minimized representation
     exact ⟨h_cg, h_seen⟩

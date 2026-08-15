@@ -50,7 +50,7 @@ Files not listed are auxiliary.
         - Lemma 4: [Unambiguous Representation Verification](TACG/MinimalExample/UnambiguousRepresentationVerification.lean)
         - Corollary 2: [Minimal Example Verification](TACG/MinimalExample/MinimalExampleVerification.lean)
     - Discussion
-        - Lemma 11: [Seen Test Inputs](TACG/Discussion/SeenTestInputs.lean)
+        - Lemma 11: [Seen Test Component Inputs](TACG/Discussion/SeenTestComponentInputs.lean)
         - Theorem 2: [Alternative Necessary and Sufficient Condition](TACG/Discussion/AlternativeNecessaryAndSufficientCondition.lean)
         - Corollary 3: [Injective Necessary and Sufficient Condition](TACG/Discussion/InjectiveNecessaryAndSufficientCondition.lean)
 

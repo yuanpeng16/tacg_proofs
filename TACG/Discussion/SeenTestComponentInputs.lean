@@ -8,7 +8,7 @@ open TACG.Derivations.Sufficiency.InjectiveComponentOutputs
 open TACG.Derivations.Sufficiency.InductionOverGraph
 open TACG.Derivations.Sufficiency.ComponentInput
 
-namespace TACG.Discussion.SeenTestInputs
+namespace TACG.Discussion.SeenTestComponentInputs
 
 /-!
 # Auxiliary Lemma 1: Convert membership in M graph to Z graph
@@ -254,7 +254,7 @@ minimized representations hold, then all test component inputs have been seen
 in training. This is used in the alternative version of the theorem to derive
 the seen-inputs condition from AS-UMR.
 -/
-lemma seen_test_inputs {train test : List Sample}
+lemma seen_test_component_inputs {train test : List Sample}
     (Z : ReferenceModel train test) (M : Model)
     (h_struct : StructuralAlignment M Z.model (train ++ test))
     (h_unamb : ∀ c ∈ components_list M train, UnambiguousRepresentation c train M Z.model)
@@ -286,4 +286,4 @@ lemma seen_test_inputs {train test : List Sample}
   -- 6. Construct the final witness for seen_inputs_condition.
   refine ⟨A, hA, zA, hzA_non_M, hcomp_M, hvals_M, hcomps_M⟩
 
-end TACG.Discussion.SeenTestInputs
+end TACG.Discussion.SeenTestComponentInputs
