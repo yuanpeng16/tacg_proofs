@@ -1,9 +1,7 @@
 import TACG.Definitions
-import TACG.Derivations.Helper.SetMembership
 import TACG.Derivations.Helper.InputNodePairProcessing
 
 open TACG.Definitions
-open TACG.Derivations.Helper.SetMembership
 open TACG.Derivations.Helper.InputNodePairProcessing
 
 namespace TACG.Derivations.Sufficiency.InputNodePair
