@@ -89,7 +89,7 @@ noncomputable def get_z (M Z : Model) (train : List Sample) (c : Component)
   exact Subtype.mk z0 (And.intro z0_in_img ξ_proof)
 
 /--
-Lemma 7 (Injective Component Outputs):
+Lemma 6 (Injective Component Outputs):
 If M is structurally aligned with Z, and for component c we have both
 unambiguous and minimized representations, then M has an injective
 representation on c (i.e., ξ_c is injective).

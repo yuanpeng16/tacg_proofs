@@ -24,7 +24,7 @@ private lemma output_node_value_eq {model : Model} {dataset : List Sample} {s : 
   rw [hi] at h_eq
   simpa [g] using h_eq
 
-/-- Lemma 10 (Injective Mapping for Sufficiency).
+/-- Lemma 9 (Injective Mapping for Sufficiency).
     If a model has structural alignment with a reference model and has injective
     representation for all used components, then it provably enables compositional
     generalization. The proof uses induction over the graph to match every test

@@ -12,8 +12,8 @@ namespace TACG.Derivations.Sufficiency.SufficiencyDirection
     If a model has AS-UMR (Aligned Structure-Unambiguous Minimized Representation),
     then it provably enables compositional generalization.
     The proof: from AS-UMR we derive injective representation for all used
-    components (Lemma 7), then apply the injective mapping sufficiency lemma
-    (Lemma 10) to obtain compositional generalization. -/
+    components (Lemma 6), then apply the injective mapping sufficiency lemma
+    (Lemma 9) to obtain compositional generalization. -/
 lemma sufficiency_direction (M : Model) (train test : List Sample)
     (h_as_umr : AS_UMR M train test) :
     CompositionalGeneralization M train test := by

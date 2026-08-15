@@ -6,7 +6,7 @@ open TACG.Derivations.Sufficiency.ComponentInput
 
 namespace TACG.Derivations.Sufficiency.InductionStep
 
-/-- Lemma: Induction Step (Lemma 6 in the paper).
+/-- Lemma: Induction Step (Lemma 5 in the paper).
     Given structural alignment and injective representation for all used
     non-output components, if for every input node of a test node zB there is
     a training node matching it in both reference and hypothesis values,
