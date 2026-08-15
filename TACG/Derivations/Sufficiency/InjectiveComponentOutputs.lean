@@ -17,7 +17,7 @@ private lemma hyp_in_ξ_set_of_ξ {M Z : Model} {train : List Sample} {c : Compo
   rcases rel with ⟨A, hA, out, h_out_M, h_comp_M, h_eq, _⟩
   -- By definition of ξ, out is an intermediate node.
   unfold ξ_set
-  rw [mem_toFinset, List.mem_dedup, List.mem_flatten]
+  rw [List.mem_toFinset, List.mem_flatten]
   let L' := List.map (fun out' => (M.graphSet A).node_value out')
                (List.filter (fun out' => (M.graphSet A).node_component out' = c)
                  (M.graphSet A).intermediate_nodes)
@@ -44,7 +44,7 @@ private lemma value_in_ξ_set_of_ξ {M Z : Model} {train : List Sample} {c : Com
     rw [← (h_comp_eq out h_out_M_non).1]; exact h_comp_M
   -- Construct membership proof for Z's ξ_set.
   unfold ξ_set
-  rw [mem_toFinset, List.mem_dedup, List.mem_flatten]
+  rw [List.mem_toFinset, List.mem_flatten]
   let L' := List.map (fun out' => (Z.graphSet A).node_value out')
                (List.filter (fun out' => (Z.graphSet A).node_component out' = c)
                  (Z.graphSet A).intermediate_nodes)

@@ -15,26 +15,6 @@ underlying list representation for structural decomposition and reasoning.
 namespace TACG.Derivations.Helper.SetMembership
 
 /--
-`mem_toFinset` establishes the equivalence between `List.toFinset` and
-`List.dedup` with respect to membership.
-
-For any type `α` with decidable equality and list `l`, an element `x` belongs to
-`List.toFinset l` (as an element of `Finset`) iff `x` belongs to `l.dedup` (as
-an element of the list).
-
-This lemma is mainly used to convert membership in `ξ_set` (which returns a
-`Finset`) into operations on the underlying list, enabling decomposition using
-`List.mem_dedup`, `List.mem_flatten`, and `List.mem_map`.
-
-Proof: `Finset.mem_def` rewrites `x ∈ s` to `s x` (`Finset` as predicate), and
-`List.toFinset` is internally equivalent to a `Finset` built from `l.dedup`,
-so both sides are definitionally equivalent; `rfl` closes the goal.
--/
-lemma mem_toFinset {α : Type} [DecidableEq α] (x : α) (l : List α) :
-    x ∈ List.toFinset l ↔ x ∈ l.dedup := by
-  rw [Finset.mem_def]; rfl
-
-/--
 `ξ_set_mem_elim` is the backward elimination lemma for membership in `ξ_set`.
 
 Given a model `Z`, training samples `train`, component `c`, and a value `z_val`,
@@ -50,14 +30,13 @@ the concrete graph structure, and is a key step in proving `surjective_mapping`.
 
 Proof sketch:
 1. Unfold `ξ_set` to obtain `z_val ∈ List.toFinset (flatten ...)`.
-2. Use `mem_toFinset` to convert to `z_val ∈ (flatten ...).dedup`.
-3. Use `List.mem_dedup` to get `z_val ∈ flatten ...`.
-4. Use `List.mem_flatten` to extract the sublist `L'` and its source sample `A`.
-5. Further decompose `List.mem_map` to obtain the concrete output node `out`
+2. Use `List.mem_toFinset` to get `z_val ∈ flatten ...`.
+3. Use `List.mem_flatten` to extract the sublist `L'` and its source sample `A`.
+4. Further decompose `List.mem_map` to obtain the concrete output node `out`
    and its membership.
-6. Use `List.mem_filter` to get `out ∈ gA.intermediate_nodes` and
+5. Use `List.mem_filter` to get `out ∈ gA.intermediate_nodes` and
    `gA.node_component out = c`.
-7. Assemble the results to obtain the desired existential conclusion.
+6. Assemble the results to obtain the desired existential conclusion.
 -/
 lemma ξ_set_mem_elim (Z : Model) (train : List Sample) (c : Component) (z_val : Value) :
     z_val ∈ ξ_set Z train c →
@@ -67,8 +46,7 @@ lemma ξ_set_mem_elim (Z : Model) (train : List Sample) (c : Component) (z_val :
       (Z.graphSet A).node_value out = z_val := by
   unfold ξ_set
   intro h
-  rw [mem_toFinset] at h
-  rw [List.mem_dedup] at h
+  rw [List.mem_toFinset] at h
   rw [List.mem_flatten] at h
   rcases h with ⟨L', hL', hz⟩
   rcases List.mem_map.mp hL' with ⟨A, hA, rfl⟩

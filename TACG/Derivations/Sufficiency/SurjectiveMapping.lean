@@ -42,7 +42,7 @@ lemma surjective_mapping (M Z : Model) (train : List Sample)
   -- Prove h_val belongs to M's ξ_set (based solely on intermediate nodes).
   have h_dom : h_val ∈ ξ_set M train c := by
     unfold ξ_set
-    rw [mem_toFinset, List.mem_dedup, List.mem_flatten]
+    rw [List.mem_toFinset, List.mem_flatten]
     -- Construct the sublist containing h_val.
     let L' := List.map (fun out' => (M.graphSet A).node_value out')
                 (List.filter (fun out' => (M.graphSet A).node_component out' = c)
