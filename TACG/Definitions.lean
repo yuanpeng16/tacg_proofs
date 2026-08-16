@@ -33,7 +33,7 @@ structure Component where
 noncomputable instance : DecidableEq Component := Classical.decEq Component
 
 /-- Special input component (not a graph output), used for input nodes. -/
-noncomputable def inputComponent : Component :=
+def inputComponent : Component :=
   { arity := 0, is_graph_output := false }
 
 /-- A computational graph (without apply_of, supplied by Model).
