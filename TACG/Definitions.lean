@@ -24,8 +24,6 @@ structure Sample where
   input : Node → Value
   output : Node → Value
 
-noncomputable instance : DecidableEq Sample := Classical.decEq Sample
-
 /-- Component identifier: arity and whether it produces graph output nodes.
     Corresponds to Definition 1 (Component). -/
 structure Component where
