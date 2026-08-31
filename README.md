@@ -52,7 +52,7 @@ Files not listed are auxiliary.
     - Discussion
         - Lemma 11: [Seen Test Component Inputs](TACG/Discussion/SeenTestComponentInputs.lean)
         - Theorem 2: [Alternative Necessary and Sufficient Condition](TACG/Discussion/AlternativeNecessaryAndSufficientCondition.lean)
-        - Corollary 3: [Injective Necessary and Sufficient Condition](TACG/Discussion/InjectiveNecessaryAndSufficientCondition.lean)
+        - Corollary 3: [Necessary and Sufficient Condition via Injectivity](TACG/Discussion/NecessaryAndSufficientConditionViaInjectivity.lean)
 
 ## Versions
 

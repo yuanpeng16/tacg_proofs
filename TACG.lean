@@ -2,7 +2,7 @@ import TACG.Derivations.Theorems.NecessaryAndSufficientCondition
 import TACG.ExampleApproach.ExampleApproachVerification
 import TACG.MinimalExample.MinimalExampleVerification
 import TACG.Discussion.AlternativeNecessaryAndSufficientCondition
-import TACG.Discussion.InjectiveNecessaryAndSufficientCondition
+import TACG.Discussion.NecessaryAndSufficientConditionViaInjectivity
 
 /-!
 # TACG: Formal Verification in Lean 4
@@ -28,7 +28,7 @@ All theorems and corollaries are mechanically verified in Lean 4.
   Theorem 2 (Alternative Necessary and Sufficient Condition) — the
   equivalence where "seen test inputs" is part of the definition.
 
-- **`TACG.Discussion.InjectiveNecessaryAndSufficientCondition`**:
-  Corollary 3 (Injective Necessary and Sufficient Condition) — the
+- **`TACG.Discussion.NecessaryAndSufficientConditionViaInjectivity`**:
+  Corollary 3 (Necessary and Sufficient Condition via Injectivity) — the
   equivalent condition using injective representation (AS-IR).
 -/

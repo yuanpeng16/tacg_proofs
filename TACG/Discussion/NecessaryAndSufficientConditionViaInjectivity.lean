@@ -10,7 +10,7 @@ import TACG.Derivations.Sufficiency.InjectiveComponentOutputs
 import TACG.Derivations.Sufficiency.InjectiveMappingForSufficiency
 
 /-!
-# Injective Necessary and Sufficient Condition (Corollary 3)
+# Necessary and Sufficient Condition via Injectivity (Corollary 3)
 
 This file formalizes the injective version of the main theorem:
 compositional generalization is equivalent to AS-IR (Aligned Structure-Injective
@@ -24,14 +24,14 @@ open TACG.Derivations.Necessity.NecessityDirection
 open TACG.Derivations.Sufficiency.InjectiveComponentOutputs
 open TACG.Derivations.Sufficiency.InjectiveMappingForSufficiency
 
-namespace TACG.Discussion.InjectiveNecessaryAndSufficientCondition
+namespace TACG.Discussion.NecessaryAndSufficientConditionViaInjectivity
 
-/-- Corollary 3 (Injective Necessary and Sufficient Condition).
+/-- Corollary 3 (Necessary and Sufficient Condition via Injectivity).
     A model provably enables compositional generalization iff it has AS-IR.
     Necessity: from compositional generalization we get AS-UMR, then from
     unambiguous + minimized we derive injective representation.
     Sufficiency: directly apply the injective mapping lemma. -/
-theorem injective_necessary_and_sufficient_condition (M : Model) (train test : List Sample)
+theorem necessary_and_sufficient_condition_via_injectivity (M : Model) (train test : List Sample)
     (h_correct_train : correct_predictions M train)
     (h_seen : seen_inputs_condition M train test) :
     CompositionalGeneralization M train test ↔ AS_IR M train test := by
@@ -62,4 +62,4 @@ theorem injective_necessary_and_sufficient_condition (M : Model) (train test : L
     -- Directly apply the sufficiency lemma for injective representation.
     exact injective_mapping_for_sufficiency Z h_struct h_inj
 
-end TACG.Discussion.InjectiveNecessaryAndSufficientCondition
+end TACG.Discussion.NecessaryAndSufficientConditionViaInjectivity
