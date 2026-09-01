@@ -36,7 +36,7 @@ Files not listed are auxiliary.
             - Lemma 5: [Surjective Mapping](TACG/Derivations/Sufficiency/SurjectiveMapping.lean)
             - Lemma 6: [Injective Component Outputs](TACG/Derivations/Sufficiency/InjectiveComponentOutputs.lean)
             - Lemma 7: [Component Input](TACG/Derivations/Sufficiency/ComponentInput.lean)
-            - Lemma 2: [Induction Step](TACG/Derivations/Sufficiency/InductionStep.lean)
+            - Lemma 2: [Inductive Step](TACG/Derivations/Sufficiency/InductiveStep.lean)
             - Lemma 8: [Induction over the Graph](TACG/Derivations/Sufficiency/InductionOverGraph.lean)
             - Lemma 9: [Injective Mapping for Sufficiency](TACG/Derivations/Sufficiency/InjectiveMappingForSufficiency.lean)
             - Proposition 2: [Sufficiency](TACG/Derivations/Sufficiency/SufficiencyDirection.lean)

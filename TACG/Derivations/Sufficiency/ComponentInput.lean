@@ -32,7 +32,7 @@ private lemma get_map {α β} (f : α → β) (l : List α) (i : ℕ) (h : i < l
 
 /-- If reference input values and components match between A and B, and the
     induction hypothesis holds for each input node of zB, then the hypothesis
-    input values also match. This is the core of the induction step. -/
+    input values also match. This is the core of the inductive step. -/
 private lemma input_values_match
     {train test : List Sample} (Z : ReferenceModel train test) (M : Model)
     (h_struct : StructuralAlignment M Z.model (train ++ test))

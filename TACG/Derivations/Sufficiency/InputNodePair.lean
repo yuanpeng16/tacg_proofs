@@ -7,7 +7,7 @@ open TACG.Derivations.Helper.InputNodePairProcessing
 namespace TACG.Derivations.Sufficiency.InputNodePair
 
 /-- Node match: the two nodes have equal components, equal hypothesis values,
-    and equal reference values. Used in the induction step to relate nodes
+    and equal reference values. Used in the inductive step to relate nodes
     across samples. Note that ξ only applies to intermediate nodes. -/
 def node_match (M Z : Model) (train test : List Sample)
     (_h_struct : StructuralAlignment M Z (train ++ test))

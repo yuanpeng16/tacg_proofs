@@ -1,10 +1,10 @@
 import TACG.Definitions
-import TACG.Derivations.Sufficiency.InductionStep
+import TACG.Derivations.Sufficiency.InductiveStep
 import TACG.Derivations.Sufficiency.InductionBaseCase
 import TACG.Derivations.Sufficiency.IndexTopology
 
 open TACG.Definitions
-open TACG.Derivations.Sufficiency.InductionStep
+open TACG.Derivations.Sufficiency.InductiveStep
 open TACG.Derivations.Sufficiency.InductionBaseCase
 open TACG.Derivations.Sufficiency.IndexTopology
 
@@ -15,7 +15,7 @@ namespace TACG.Derivations.Sufficiency.InductionOverGraph
     components, then for every node in a test graph (input or non-input),
     there exists a training graph node with the same component, same reference
     value, and same hypothesis value. This is proved by well-founded induction
-    on the topological order using the induction step lemma and the base case. -/
+    on the topological order using the inductive step lemma and the base case. -/
 lemma induction_over_graph
     {train test : List Sample} (Z : ReferenceModel train test) (M : Model)
     (h_struct : StructuralAlignment M Z.model (train ++ test))
@@ -67,7 +67,7 @@ lemma induction_over_graph
   by_cases hn_input : n ∈ gB.input_nodes
   · -- Base case: n is an input node, use the base case lemma.
     exact input_node_match_from_noninput Z M h_struct B hB n hn_input
-  · -- Induction step: n is a non-input node.
+  · -- Inductive step: n is a non-input node.
     have hn_noninput : n ∈ gB.non_input_nodes := by
       have mem_n : n ∈ full := List.get_mem full ⟨i, h_lt⟩
       rw [h_full_eq, List.mem_append] at mem_n
@@ -148,11 +148,11 @@ lemma induction_over_graph
                 (Z.model.graphSet C).node_component zC :=
               (h_comp_eq_C zC hzC_in_M_noninput).1
             rw [hcompC', hcomp_C, hcompB]
-      -- Now apply the induction step lemma.
+      -- Now apply the inductive step lemma.
       exact ⟨C, zC, hC, hzC_or, hcompM_C, hvalM_C, hval_C⟩
-    -- Obtain A,zA by the induction_step lemma.
+    -- Obtain A,zA by the inductive_step lemma.
     obtain ⟨A, zA, hA, hzA, hcomp, z_val_eq, m_val_eq⟩ :=
-      induction_step Z M h_struct h_inj B hB n hn_noninput h_ind_step
+      inductive_step Z M h_struct h_inj B hB n hn_noninput h_ind_step
     have hzA_in_union : zA ∈ (Z.model.graphSet A).input_nodes ++
         (Z.model.graphSet A).non_input_nodes :=
       List.mem_append_right _ hzA

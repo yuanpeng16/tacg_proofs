@@ -4,16 +4,16 @@ import TACG.Derivations.Sufficiency.ComponentInput
 open TACG.Definitions
 open TACG.Derivations.Sufficiency.ComponentInput
 
-namespace TACG.Derivations.Sufficiency.InductionStep
+namespace TACG.Derivations.Sufficiency.InductiveStep
 
-/-- Lemma: Induction Step (Lemma 5 in the paper).
+/-- Lemma: Inductive Step (Lemma 5 in the paper).
     Given structural alignment and injective representation for all used
     non-output components, if for every input node of a test node zB there is
     a training node matching it in both reference and hypothesis values,
     then there exists a training node zA that matches zB in component,
     reference value, and hypothesis value.
     This is the core inductive step for proving sufficiency. -/
-lemma induction_step
+lemma inductive_step
     {train test : List Sample} (Z : ReferenceModel train test) (M : Model)
     (h_struct : StructuralAlignment M Z.model (train ++ test))
     (h_inj : ∀ c ∈ components_list M train, -- only require components used in training
@@ -80,4 +80,4 @@ lemma induction_step
   -- Package all the equalities into the conclusion.
   exact ⟨A, zA, hA, hzA, hcomp, z_val_eq, m_val_eq⟩
 
-end TACG.Derivations.Sufficiency.InductionStep
+end TACG.Derivations.Sufficiency.InductiveStep
