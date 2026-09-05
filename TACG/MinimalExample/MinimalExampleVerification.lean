@@ -4,7 +4,6 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: The TACG Contributors
 -/
 
-import Mathlib.Data.Fintype.Card
 import Mathlib.Tactic.NormNum
 import TACG.MinimalExample.UnambiguousRepresentationVerification
 
@@ -19,7 +18,6 @@ We reuse definitions from UnambiguousRepresentationVerification.lean and
 add the minimized representation condition.
 -/
 
-open Finset
 open TACG.MinimalExample.UnambiguousRepresentationVerification
 open Sample  -- allow direct use of a, b, c, ...
 
