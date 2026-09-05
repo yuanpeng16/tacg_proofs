@@ -17,7 +17,7 @@ lake build
 Output:
 
 ```
-Build completed successfully (1940 jobs).
+Build completed successfully (1941 jobs).
 ```
 
 ## Main Files
