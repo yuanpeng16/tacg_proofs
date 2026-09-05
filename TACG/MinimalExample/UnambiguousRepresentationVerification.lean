@@ -4,10 +4,9 @@ import Mathlib.Data.Fintype.Card
 # Unambiguous Representation Verification (Lemma 4)
 
 This file formalizes the minimal example and proves Lemma 4 from the paper:
-unambiguous representation does not require minimized representation.
-It shows that for the three‑input XOR task, if the model is correct on training,
-then the hidden node `h` is a function of the true intermediate value `z` on
-the training set: `h(s₁) = h(s₂)` implies `z(s₁) = z(s₂)`.
+under the condition of correct training predictions, the hidden node `h`
+has an unambiguous representation with respect to the true intermediate
+value `z` on the training set. That is, `h(s₁) = h(s₂)` implies `z(s₁) = z(s₂)`.
 -/
 
 open Finset
@@ -65,8 +64,7 @@ structure ExampleModel where
   -- Determinism of the second component: out depends only on (h,x₃).
   out_depends : ∀ s₁ s₂, h s₁ = h s₂ ∧ x₃ s₁ = x₃ s₂ → out s₁ = out s₂
 
-/-- Lemma 4: Unambiguous Representation Verification.
-    It does **not** require the minimized representation condition. -/
+/-- Lemma 4: Unambiguous Representation Verification. -/
 lemma unambiguous_representation_verification (M : ExampleModel)
     (h_correct : ∀ s ∈ train_set, M.out s = y s) :
     ∀ s₁ ∈ train_set, ∀ s₂ ∈ train_set, M.h s₁ = M.h s₂ → z s₁ = z s₂ := by
