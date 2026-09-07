@@ -2,6 +2,8 @@
 
 *A Theoretical Analysis of Provable Compositional Generalization in Neural Networks: A Necessary and Sufficient Condition*
 
+**Preprint Paper:** https://arxiv.org/abs/2505.02627
+
 **Main project repository:** https://github.com/yuanpeng16/tacg
 
 The proofs are machine-checked by Lean 4. The key files are:
